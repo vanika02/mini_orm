@@ -21,7 +21,7 @@ so what this do is a mini orm engine in python which
 -- └── README.md
 
 ### FLOW
-database.py -> tables
-models.py -> how to insert the data
-query.py -> how to fetch the data
-main.py -> where the data is actually added
+### database.py -> tables
+### models.py -> how to insert the data
+### query.py -> how to fetch the data
+### main.py -> where the data is actually added

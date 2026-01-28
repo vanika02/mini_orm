@@ -5,3 +5,28 @@
 
 from database import database, get_next_id
 from query import query_set
+
+# basemodel for all tables(has common logic for all the tables)
+# we need basemodel because each table need create(), objects(), so instead of repeating code
+class BaseModel:
+    table_name = None 
+
+    @classmethod
+    def create(cls, **kwargs):
+        table = database[cls.table_name]
+        kwargs["id"] = get_next_id(table)
+        table.append(kwargs)
+        return kwargs
+    
+    @classmethod
+    def objects(cls):
+        return query_set(database[cls.table_name])
+
+
+# student and teacher models
+
+class Student(BaseModel):
+    table_name == "students"
+
+class Teacher(BaseModel):
+    table_name == "teachers"

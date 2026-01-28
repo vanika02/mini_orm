@@ -28,5 +28,12 @@ class BaseModel:
 class Student(BaseModel):
     table_name == "students"
 
+    # relationship student --> teacher
+    @classmethod
+    def get_teacher(cls, student_id):
+        from models import Teacher
+        student = cls.objects().get(id=student_id)
+        return Teacher.objects().get(id=student["teacher_id"])
+
 class Teacher(BaseModel):
     table_name == "teachers"

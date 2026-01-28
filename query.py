@@ -1,7 +1,7 @@
 # this file will converts python into filtering logic
 
 class query_set:
-    def __init__(set, table):
+    def __init__(self, table):
         self.table = table
 
     # filter

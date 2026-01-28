@@ -26,14 +26,15 @@ class BaseModel:
 # student and teacher models
 
 class Student(BaseModel):
-    table_name == "students"
+    table_name = "students"
 
     # relationship student --> teacher
+    # this will simulate the foreign key logic
     @classmethod
     def get_teacher(cls, student_id):
         from models import Teacher
         student = cls.objects().get(id=student_id)
-        return Teacher.objects().get(id=student["teacher_id"])
+        return Teacher.objects().get(id=student["id"])
 
 class Teacher(BaseModel):
-    table_name == "teachers"
+    table_name = "teachers"

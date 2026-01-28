@@ -1,27 +1,66 @@
-# BUILDING A CUSTOM ORM IN PYTHON
+# 🧩 BUILDING A CUSTOM ORM IN PYTHON
 
-so what this do is a mini orm engine in python which 
--- pretends to be a database
--- let's me create tables 
--- let's me insert data
--- let me query that data
--- let me update and delete that data
--- understand the relationships (student --> techer)
+This project is a **mini ORM engine built from scratch in python**. It simulates how real ORMs like Django ORM / SQLAlchemy works internally.
 
-##  A MINI ORM FOR SCHOOL MANAGEMENT SYSTEM
+It allows me to:
+- Pretend Python lists are database tables
+- Create tables
+- Insert data
+- Query data
+- Update and delete data
+- Understand relationships (Student --> Teacher)
+
+---
+
+## 🏫 A MINI ORM FOR SCHOOL MANAGEMENT SYSTEM
+
+This ORM is built around a simple school system with:
+- **Students**
+- **Techers**
+- A Relationship between them
+
+---
 
 ### 📁 Project Structure
 
-### mini_orm/
--- │
--- ├── database.py
--- ├── models.py
--- ├── query.py
--- ├── main.py
--- └── README.md
+mini_orm/
+│
+├── database.py # Fake database (tables + storage)
+├── models.py # Table → Class mapping & insert logic
+├── query.py # Query engine (filter, get, update, delete)
+├── main.py # Run & test the ORM
+└── README.md # Documentation
 
-### FLOW
-### database.py -> tables
-### models.py -> how to insert the data
-### query.py -> how to fetch the data
-### main.py -> where the data is actually added
+---
+
+## 🔁 Project Flow
+
+database.py → defines tables
+models.py → inserts data using ORM
+query.py → fetches / filters data
+main.py → runs the project
+
+--- 
+
+## ⚙️ How it Works 
+
+### 1️⃣ database.py
+Stores fake tables using python lists and simulates auto-increment IDs.
+
+### 2️⃣ models.py
+Maps tables to classes (Student, Teacher) and handles inserts.
+
+### 3️⃣ query.py
+Acts like a query engine (Similar to SQL SELECT, UPDATE, DELETE).
+
+### 4️⃣ main.py
+This is the entry point where data is created and queried.
+
+---
+
+## ▶️ How to Run
+
+```bash
+python3 main.py
+```
+

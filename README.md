@@ -25,20 +25,20 @@ This ORM is built around a simple school system with:
 
 mini_orm/
 │
-├── database.py # Fake database (tables + storage)
-├── models.py # Table → Class mapping & insert logic
-├── query.py # Query engine (filter, get, update, delete)
-├── main.py # Run & test the ORM
-└── README.md # Documentation
+├── database.py   # Fake database (tables + storage)
+├── models.py     # Table → Class mapping & insert logic
+├── query.py      # Query engine (filter, get, update, delete)
+├── main.py       # Run & test the ORM
+└── README.md     # Documentation
 
 ---
 
 ## 🔁 Project Flow
 
 database.py → defines tables
-models.py → inserts data using ORM
-query.py → fetches / filters data
-main.py → runs the project
+models.py   → inserts data using ORM
+query.py    → fetches / filters data
+main.py     → runs the project
 
 --- 
 
